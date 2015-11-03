@@ -7,6 +7,24 @@ public class LineInformation {
     private String Line_name;
     private int Deal_time;
 
+    public int getDeal_time() {
+        return Deal_time;
+    }
+
+    public void setDeal_time(int deal_time) {
+        Deal_time = deal_time;
+    }
+
+    public String getLine_name() {
+        return Line_name;
+    }
+
+    public void setLine_name(String line_name) {
+        Line_name = line_name;
+    }
+
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
