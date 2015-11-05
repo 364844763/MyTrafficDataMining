@@ -26,4 +26,17 @@ public class TimeUtil {
         }
         return dayForWeek;
     }
+    public static String timeParse(String time,char type){
+        if (type=='/')
+        return time.replace('/','-');
+        else if (type==' '){
+            StringBuilder result=new StringBuilder(time);
+            result.insert(time.length()-2,'-');
+            result.insert(time.length()-4,'-');
+            result.insert(time.length()-6,'-');
+        }else {
+            return time;
+        }
+    }
+
 }
