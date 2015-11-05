@@ -34,6 +34,7 @@ public class TimeUtil {
             result.insert(time.length()-2,'-');
             result.insert(time.length()-4,'-');
             result.insert(time.length()-6,'-');
+            return result.toString();
         }else {
             return time;
         }
