@@ -1,9 +1,11 @@
 package com.hit.jiajie.bean;
 
 /**
+ * 统计每天内每小时乘车人数
  * Created by jiajie on 15/11/3.
  */
 public class LineInformation {
+
     private String Line_name;
     private int Deal_time;
 

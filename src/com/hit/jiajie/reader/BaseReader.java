@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * 打入文件基类
  * Created by jiajie on 15/11/3.
  */
 public class BaseReader {
