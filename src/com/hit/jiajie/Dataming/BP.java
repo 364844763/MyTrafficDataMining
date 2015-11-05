@@ -74,8 +74,8 @@ public class BP {
      * @param inputSize 输入向量长度
      * @param hiddenSize 隐藏层大小
      * @param outputSize 输出向量长度
-     * @param eta 错误率
-     * @param momentum 学习率
+     * @param eta 学习率
+     * @param momentum
      * @param epoch
      */
     public BP(int inputSize, int hiddenSize, int outputSize, double eta,
