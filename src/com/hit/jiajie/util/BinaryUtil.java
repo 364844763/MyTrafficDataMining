@@ -5,23 +5,21 @@ package com.hit.jiajie.util;
  */
 public class BinaryUtil {
     public static double[] inputInvert(int value){
-        int index = 31;
-        double[] binary=new double[32];
-        do {
-            binary[index--] = (value & 1);
-            value >>>= 1;
-        } while (value != 0);
-        return binary;
+       double[] input=new double[64];
+       int i=value/100;
+       input[i]=1;
+       return input;
     }
     public static double targetInvert(double[] binary){
-        double target=0;
-        int temp=1;
-        for (double i:binary){
-            if (i>0.5)
-            target=target+temp*i;
-            temp*=2;
+        double max=0;
+        int target=-1;
+        for (int i = 0; i <binary.length; i++) {
+            if (binary[i]>max){
+                max=binary[i];
+                target=i;
+            }
         }
-        return target;
+        return target*100;
     }
 
 }

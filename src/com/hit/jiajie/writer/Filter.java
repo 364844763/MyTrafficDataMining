@@ -23,7 +23,7 @@ public class Filter {
             while (iter.hasNext()) {
                 Map.Entry entry = (Map.Entry) iter.next();
                 HourInformation key= (HourInformation) entry.getKey();
-                if (key.getHour()>=6&&key.getHour()<=23) {
+                if (key.getHour()>=6&&key.getHour()<=21) {
                     String line;
                     List<DayAndPeople> list= (List<DayAndPeople>) entry.getValue();
                     for (DayAndPeople dayAndPeople:list){

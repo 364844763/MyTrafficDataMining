@@ -29,7 +29,6 @@ public abstract class BaseWriter {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        BufferedWriter bw = new BufferedWriter(fw);
 
     }
     protected String operate( Map.Entry entry){

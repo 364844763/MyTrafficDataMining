@@ -1,7 +1,6 @@
 package com.hit.jiajie.reader;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,8 +14,10 @@ public class BaseReader {
 
     public Map<Object,Object> read(String path){
         try {
+            File f = new File(path);
+            InputStreamReader read = new InputStreamReader(new FileInputStream(f),"UTF-8");
             FileReader fileReader=new FileReader(path);
-            BufferedReader br=new BufferedReader(fileReader);
+            BufferedReader br=new BufferedReader(read);
             String line=br.readLine();
             while (line!=null){
                 operater(line);

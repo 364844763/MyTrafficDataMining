@@ -1,6 +1,7 @@
 package com.hit.jiajie.reader;
 
 import com.hit.jiajie.bean.Train;
+import com.hit.jiajie.util.TimeUtil;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -21,10 +22,11 @@ public class DiffTest{
             while (line!=null){
                 String[] temp=line.split(",");
                 Train train=new Train();
-                train.setDate(temp[2]);
+                train.setDate(TimeUtil.timeParse(temp[2],' '));
                 train.setHour(Double.parseDouble(temp[1]));
-                train.setLineID(Double.parseDouble(temp[0]));
+                train.setLineID(temp[0]);
                 train.setTarget(Double.parseDouble(temp[3]));
+                train.setWeeks(TimeUtil.dayForWeek(train.getDate()));
                 if (temp[2].substring(0,temp[2].length()-1).equals("2014122")){
 
                     tests.add(train);

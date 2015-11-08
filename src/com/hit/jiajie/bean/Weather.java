@@ -6,8 +6,8 @@ package com.hit.jiajie.bean;
  */
 public class Weather {
     private String date;
-    private int weatherType;
-    private int windyType;
+    private String weatherType;
+    private String windyType;
 
     public String getDate() {
         return date;
@@ -17,19 +17,19 @@ public class Weather {
         this.date = date;
     }
 
-    public int getWeatherType() {
+    public String getWeatherType() {
         return weatherType;
     }
 
-    public void setWeatherType(int weatherType) {
+    public void setWeatherType(String weatherType) {
         this.weatherType = weatherType;
     }
 
-    public int getWindyType() {
+    public String getWindyType() {
         return windyType;
     }
 
-    public void setWindyType(int windyType) {
+    public void setWindyType(String windyType) {
         this.windyType = windyType;
     }
 }

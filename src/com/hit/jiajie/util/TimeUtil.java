@@ -26,6 +26,13 @@ public class TimeUtil {
         }
         return dayForWeek;
     }
+
+    /**
+     * 时间标准化
+     * @param time
+     * @param type
+     * @return
+     */
     public static String timeParse(String time,char type){
         if (type=='/')
         return time.replace('/','-');
@@ -33,8 +40,13 @@ public class TimeUtil {
             StringBuilder result=new StringBuilder(time);
             result.insert(time.length()-2,'-');
             result.insert(time.length()-4,'-');
-            result.insert(time.length()-6,'-');
-            return result.toString();
+            String[] temp=result.toString().split("-");
+            int i=Integer.parseInt(temp[1]);
+            temp[0]+="-"+i;
+            i=Integer.parseInt(temp[2]);
+            temp[0]+="-"+i;
+            //result.insert(time.length()-6,'-');
+            return  temp[0];
         }else {
             return time;
         }
