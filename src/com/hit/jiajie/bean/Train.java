@@ -9,7 +9,15 @@ public class Train {
     private double target;
     private double hour;
     private  String date;
+    private int dataInt;
 
+    public int getDataInt() {
+        return dataInt;
+    }
+
+    public void setDataInt(int dataInt) {
+        this.dataInt = dataInt;
+    }
 
     public String getLineID() {
         return lineID;
